@@ -1,12 +1,17 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-import colors from './theme/colors';
+import colors from '@/styles/theme/colors';
 
 export default createGlobalStyle`
   ${reset}
 
   html {
     font-size: 68.75%;
+  }
+
+  ::selection {
+    color: ${colors.white};
+    background: ${colors.primaryDark};
   }
 
   body {

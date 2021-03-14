@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
-import colors from '../../theme/colors';
-import theme from '../../theme/theme';
+import colors from '@/styles/theme/colors';
+import theme from '@/styles/theme/theme';
 
 export const SvgContainers = styled.div`
   margin-top: auto;
@@ -40,6 +40,24 @@ export const Plume = styled.svg`
   animation: ${plumeAnimation} infinite .5s ease-in alternate;
 `
 
+export const HeroAnimation = keyframes`
+  0% {
+    background-position: left top;
+  }
+  25% {
+    background-position: right top;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  75% {
+    background-position: left bottom;
+  }
+  100% {
+    background-position: left top;
+  }
+`
+
 export const Hero = styled.section`
   min-height: 85vh;
   display: flex;
@@ -63,6 +81,10 @@ export const Hero = styled.section`
     font-size: ${theme.fontSizes.large};
   }
 
-  background: radial-gradient(110% 45% at 100% 100%, #FF7E5F 0%, rgba(255, 126, 95, 0) 100%), radial-gradient(65% 60% at 0% 30%, #A03189 0%, rgba(160, 49, 137, 0) 100%), radial-gradient(335% 100% at 100% 0%, #3C308C 0%, rgba(60, 48, 140, 0.75) 100%);
+  background: radial-gradient(110% 45% at 100% 100%, #FF7E5F 0%, rgba(255, 126, 95, 0) 100%), 
+              radial-gradient(65% 60% at 0% 30%, #A03189 0%, rgba(160, 49, 137, 0) 100%), 
+              radial-gradient(335% 100% at 100% 0%, #3C308C 0%, rgba(60, 48, 140, 0.75) 100%);
+	background-size: 200% 200%;
+  animation: ${HeroAnimation} infinite 20s ease-in-out alternate;
   backdrop-filter: blur(10px);
 `

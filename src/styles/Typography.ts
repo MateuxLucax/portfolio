@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import colors from './theme/colors';
-import theme from './theme/theme';
+import colors from '@/styles/theme/colors';
+import theme from '@/styles/theme/theme';
 
 export const Subtitle = styled.h2`
   font-style: normal;
