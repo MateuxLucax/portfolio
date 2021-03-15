@@ -63,22 +63,19 @@ export const Hero = styled.section`
   display: flex;
   flex-direction: column;
   color: ${colors.white};
+  padding-top: ${theme.space.xxl};
 
   h1 {
-    margin-top: ${theme.space.xxl};
-    margin-bottom: ${theme.space.xl};
-    font-size: ${theme.fontSizes.large};
     padding: 0 ${theme.space.lg};
-    
-    span {
-      font-weight: 600;
-      font-size: ${theme.fontSizes.extraLarge};
-    }
+    margin-bottom: ${theme.space.xl};
+    font-weight: 600;
+    font-size: ${theme.fontSizes.extraLarge};
   }
 
   h2 {
     padding: 0 ${theme.space.lg};
     font-size: ${theme.fontSizes.large};
+    max-width: 26rem;
   }
 
   background: radial-gradient(110% 45% at 100% 100%, #FF7E5F 0%, rgba(255, 126, 95, 0) 100%), 

@@ -19,4 +19,15 @@ export default createGlobalStyle`
     color: ${colors.black};
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   }
+
+  button {
+    border: none;
+    padding: none;
+    margin: none;
+  }
+
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
 `

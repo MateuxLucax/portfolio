@@ -1,5 +1,64 @@
 import styled from 'styled-components';
+import theme from '@/styles/theme/theme';
+import boxShadow from '@/styles/theme/boxShadow';
+import colors from '@/styles/theme/colors';
 
 export const Title = styled.h1`
   color: #8257e5;
+`
+
+export const ContentList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  padding: ${theme.space.xl} 0;
+
+  a {
+    width: calc(100vw - 2.4rem);
+    position: relative;
+    
+    :nth-child(even) {
+      align-self: flex-end;   
+    }
+
+    :nth-child(odd) {
+      align-self: flex-start;
+    }
+
+    :not(:last-child) {
+      margin-bottom: ${theme.space.lg}
+    }
+    
+    transition: opacity 250ms ease-in-out;
+    box-shadow: ${boxShadow.medium};
+
+    :hover {
+      opacity: 0.9;
+    }
+
+    :focus, :active {
+      opacity: 0.8;
+    }
+  }
+
+  h3 {
+    position: absolute;
+    color: ${colors.white};
+    background-color: ${colors.primary};
+    font-weight: 600;
+    font-size: ${theme.fontSizes.small};
+    padding: ${theme.space.sm} ${theme.space.md};
+    top: ${theme.space.md};
+    left: ${theme.space.md};
+  }
+
+  h5 {
+    position: absolute;
+    color: ${colors.primary};
+    background-color: ${colors.white};
+    font-weight: 600;
+    font-size: ${theme.fontSizes.small};
+    padding: ${theme.space.sm} ${theme.space.md};
+    bottom: ${theme.space.md};
+    right: ${theme.space.md};
+  }
 `

@@ -1,7 +1,7 @@
 const theme = {
   space: {
     xs: '0.4rem',
-    sm: '0.8re,',
+    sm: '0.8rem',
     md: '1.2rem',
     lg: '2.4rem',
     xl: '3.2rem',
@@ -15,7 +15,7 @@ const theme = {
   },
   breakpoints: {
     xs: '0px',
-    sm: '600px',
+    sm: '370px',
     md: '960px',
     lg: '1280px',
     xl: '1920px',

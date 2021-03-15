@@ -1,10 +1,16 @@
 import { SvgContainers, Hero, Rocket, Plume } from "@/styles/pages/home/Hero";
 
-export default function HomeHero() {
+interface HomeHeroProps {
+  titlePrefix: string;
+  subtitle: string;
+}
+
+export default function HomeHero({ titlePrefix, subtitle }: HomeHeroProps) {
   return (
     <Hero>
-      <h1>Hi, I’m<br/><span>Mateux Lucax</span></h1>
-      <h2>My passion is to create<br/> astonishing experiences<br/>for the web.</h2>
+      <h2>{titlePrefix}</h2>
+      <h1>Mateux Lucax</h1>
+      <h2>{subtitle}</h2>
       <SvgContainers>
         <Rocket>
           <svg width="90" height="119" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,8 +22,8 @@ export default function HomeHero() {
             <defs>
               <linearGradient id="paint0_linear" x1="14.999" y1=".577" x2="15" y2="34.003" gradientUnits="userSpaceOnUse">
                 <stop stopColor="#FFA200"/>
-                <stop offset="1" stop-color="#FC6"/>
-                <stop offset="1" stop-color="#FC6"/>
+                <stop offset="1" stopColor="#FC6"/>
+                <stop offset="1" stopColor="#FC6"/>
               </linearGradient>
               </defs>
             </Plume>
