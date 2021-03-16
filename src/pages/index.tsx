@@ -28,7 +28,6 @@ const projects: HomeListItem[] = [
 ];
 
 export default function Home() {
-
   return (
     <>
       <SEO

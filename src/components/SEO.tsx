@@ -25,6 +25,8 @@ export default function SEO({
       { description && <meta name="description" content={description} />}
       { pageImage && <meta name="image" content={pageImage} />}
 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
       { !shouldIndexPage && <meta name="robots" content="noindex,nofollow" />}
     </Head>
   );

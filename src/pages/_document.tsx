@@ -28,13 +28,6 @@ export default class MyDocument extends Document {
     }
   }
 
-  componentDidMount() {
-    window.addEventListener('resize', () => {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    });
-  }
-
   render() {
     return (
       <Html lang="en-us">
