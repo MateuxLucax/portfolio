@@ -35,8 +35,9 @@ export const Rocket = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
+  cursor: pointer;
   padding-bottom: 10rem;
-  animation: ${rocketAnimation} infinite 2s ease-in-out alternate;
+  animation: ${rocketAnimation} infinite 1.5s ease-in-out alternate;
 `
 
 export const Plume = styled.svg`
@@ -62,16 +63,12 @@ export const HeroAnimation = keyframes`
 `
 
 export const Hero = styled.section`
-  padding-top: ${theme.space.xl};
-  min-height: calc(100vh - ${theme.space.xl});
+  height: 80vh;
+  height: -webkit-fill-available;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
   color: ${colors.white};
-
-  @media(min-width: ${theme.breakpoints.sm}) {
-    padding-top: ${theme.space.xxl};
-    min-height: 80vh;
-  }
 
   h1 {
     padding: 0 ${theme.space.lg};
@@ -81,6 +78,10 @@ export const Hero = styled.section`
   }
 
   h2 {
+    :nth-child(1) {
+      margin-top: ${theme.space.xl}; 
+    }
+
     padding: 0 ${theme.space.lg};
     font-size: ${theme.fontSizes.large};
     max-width: 24rem;

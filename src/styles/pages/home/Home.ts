@@ -28,22 +28,24 @@ export const ContentList = styled.ul`
       margin-bottom: ${theme.space.lg}
     }
     
-    transition: opacity 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
     box-shadow: ${boxShadow.medium};
 
     :hover {
       opacity: 0.9;
+      box-shadow: ${boxShadow.small};
     }
 
     :focus, :active {
       opacity: 0.8;
+      box-shadow: none;
     }
   }
 
   h3 {
     position: absolute;
     color: ${colors.white};
-    background: rgba(60, 48, 140, 0.75);
+    background: rgba(60, 48, 140, 0.7);
     backdrop-filter: blur(10px);
     font-weight: 600;
     font-size: ${theme.fontSizes.small};
@@ -55,12 +57,20 @@ export const ContentList = styled.ul`
   h5 {
     position: absolute;
     color: ${colors.primary};
-    background: rgba(249, 249, 249, 0.75);
+    background: rgba(249, 249, 249, 0.7);
     backdrop-filter: blur(10px);
     font-weight: 600;
     font-size: ${theme.fontSizes.small};
     padding: ${theme.space.sm} ${theme.space.md};
     bottom: ${theme.space.md};
     right: ${theme.space.md};
+    
+    transition: all 250ms ease-in-out;
+    box-shadow: ${boxShadow.medium};
+
+    :hover {
+      background: ${colors.white};
+    }
+
   }
 `

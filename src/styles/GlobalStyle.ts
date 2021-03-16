@@ -7,6 +7,7 @@ export default createGlobalStyle`
 
   html {
     font-size: 68.75%;
+    height: -webkit-fill-available;
   }
 
   ::selection {
@@ -15,6 +16,8 @@ export default createGlobalStyle`
   }
 
   body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     background: ${colors.white};
     color: ${colors.black};
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;

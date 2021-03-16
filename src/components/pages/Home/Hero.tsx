@@ -17,7 +17,6 @@ export default function HomeHero({ titlePrefix, subtitle }: HomeHeroProps) {
           to="latest-projects"
           spy={true}
           smooth={true}
-          offset={-25}
           duration={300}
         >
           <Rocket>
