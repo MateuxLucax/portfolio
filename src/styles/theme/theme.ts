@@ -15,7 +15,7 @@ const theme = {
   },
   breakpoints: {
     xs: '0px',
-    sm: '370px',
+    sm: '360px',
     md: '960px',
     lg: '1280px',
     xl: '1920px',

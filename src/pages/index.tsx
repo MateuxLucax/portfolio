@@ -1,5 +1,6 @@
 import HomeHero from "@/components/pages/Home/Hero";
 import HomeLatestProjects from "@/components/pages/Home/LatestProjects";
+import SEO from "@/components/SEO";
 import HomeListItem from "@/models/HomeListItem";
 
 const projects: HomeListItem[] = [
@@ -30,11 +31,16 @@ export default function Home() {
 
   return (
     <>
-      <HomeHero 
-        titlePrefix="Hi I'm"
-        subtitle="My passion is to create astonishing experiences for the web."
+      <SEO
+        title="MateuxLucax | Portfolio"
+        description="This is my personal portfolio. Here I share all my projects and blog posts sometimes, cuz teaching is always the best way to learn."
+        shouldExcludeTitleSuffix
       />
-      <HomeLatestProjects 
+      <HomeHero
+        titlePrefix="Hi I'm"
+        subtitle="My passion is to create astonishing experiences."
+      />
+      <HomeLatestProjects
         title="Latest Projects"
         buttonText="See more projects →"
         projects={projects}

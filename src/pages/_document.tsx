@@ -30,8 +30,10 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en-us">
         <Head>
+          <meta name="charset" content="utf-8"/>
+          <link rel="shortcut icon" href="./assets/icons/favicon.png" type="image/png"/>
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"

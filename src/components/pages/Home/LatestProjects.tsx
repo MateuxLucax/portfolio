@@ -15,17 +15,17 @@ interface HomeLatestProjectsProps {
 export default function HomeLatestProjects({ title, buttonText, projects }: HomeLatestProjectsProps) {
 
   return (
-    <LatestProjectsSection>
+    <LatestProjectsSection id="latest-projects">
       <Subtitle>{title}</Subtitle>
       <ContentList>
-        {projects.map(project => 
-          <Link 
+        {projects.map(project =>
+          <Link
             href={`/projects/${project.destination}`}
             key={project.key}
           >
             <a>
-              <Image 
-                src={`/assets/${project.image}`}
+              <Image
+                src={`/assets/images/projects/${project.image}`}
                 alt={project.title}
                 width={343}
                 height={193}
@@ -34,7 +34,7 @@ export default function HomeLatestProjects({ title, buttonText, projects }: Home
               <h3>{project.title}</h3>
               <h5>{project.buttonText}</h5>
             </a>
-          </Link>  
+          </Link>
         )}
       </ContentList>
       <PrimaryButton>{buttonText}</PrimaryButton>

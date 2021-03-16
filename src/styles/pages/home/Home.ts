@@ -43,7 +43,8 @@ export const ContentList = styled.ul`
   h3 {
     position: absolute;
     color: ${colors.white};
-    background-color: ${colors.primary};
+    background: rgba(60, 48, 140, 0.75);
+    backdrop-filter: blur(10px);
     font-weight: 600;
     font-size: ${theme.fontSizes.small};
     padding: ${theme.space.sm} ${theme.space.md};
@@ -54,7 +55,8 @@ export const ContentList = styled.ul`
   h5 {
     position: absolute;
     color: ${colors.primary};
-    background-color: ${colors.white};
+    background: rgba(249, 249, 249, 0.75);
+    backdrop-filter: blur(10px);
     font-weight: 600;
     font-size: ${theme.fontSizes.small};
     padding: ${theme.space.sm} ${theme.space.md};

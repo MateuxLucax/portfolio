@@ -2,8 +2,10 @@ import styled, { keyframes } from 'styled-components';
 import colors from '@/styles/theme/colors';
 import theme from '@/styles/theme/theme';
 
-export const SvgContainers = styled.div`
+export const RocketContainer = styled.div`
+  z-index: 1;
   margin-top: auto;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,6 +35,7 @@ export const Rocket = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
+  padding-bottom: 10rem;
   animation: ${rocketAnimation} infinite 2s ease-in-out alternate;
 `
 
@@ -59,11 +62,16 @@ export const HeroAnimation = keyframes`
 `
 
 export const Hero = styled.section`
-  min-height: 85vh;
+  padding-top: ${theme.space.xl};
+  min-height: calc(100vh - ${theme.space.xl});
   display: flex;
   flex-direction: column;
   color: ${colors.white};
-  padding-top: ${theme.space.xxl};
+
+  @media(min-width: ${theme.breakpoints.sm}) {
+    padding-top: ${theme.space.xxl};
+    min-height: 80vh;
+  }
 
   h1 {
     padding: 0 ${theme.space.lg};
@@ -75,7 +83,7 @@ export const Hero = styled.section`
   h2 {
     padding: 0 ${theme.space.lg};
     font-size: ${theme.fontSizes.large};
-    max-width: 26rem;
+    max-width: 24rem;
   }
 
   background: radial-gradient(110% 45% at 100% 100%, #FF7E5F 0%, rgba(255, 126, 95, 0) 100%), 
@@ -83,5 +91,39 @@ export const Hero = styled.section`
               radial-gradient(335% 100% at 100% 0%, #3C308C 0%, rgba(60, 48, 140, 0.75) 100%);
 	background-size: 200% 200%;
   animation: ${HeroAnimation} infinite 20s ease-in-out alternate;
+  clip-path: polygon(100% 0, 100% 100%, 50% 95%, 0 100%, 0 0);
   backdrop-filter: blur(10px);
+`
+
+export const FirstPlume = styled.div`
+  z-index: 1000;
+  bottom: 0;
+  height: 6rem;
+  position: absolute;
+  background: rgba(229, 229, 229, 0.5);
+  backdrop-filter: blur(1rem);
+  width: 90%;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+`
+
+export const SecondPlume = styled.div`
+  z-index: 100;
+  bottom: 0;
+  height: 8rem;
+  position: absolute;
+  background: rgba(213, 213, 213, 0.5);
+  backdrop-filter: blur(1rem);
+  width: 70%;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+`
+
+export const ThirdPlume = styled.div`
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  height: 10rem;
+  width: 25%;
+  background: rgba(191, 191, 191, 0.5);
+  backdrop-filter: blur(1rem);
+  clip-path: polygon(50% 0, 0 100%, 100% 100%); 
 `

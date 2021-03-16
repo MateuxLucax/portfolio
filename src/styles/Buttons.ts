@@ -10,14 +10,16 @@ export const PrimaryButton = styled.button`
   background-color: ${colors.primary};
   padding: ${theme.space.sm} ${theme.space.xl};
   cursor: pointer;
-  transition: opacity 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   box-shadow: ${boxShadow.primary};
 
   :hover {
-    opacity: 0.9;
+    box-shadow: ${boxShadow.primaryLight};
+    opacity: 0.95;
   }
 
   :focus, :active {
-    opacity: 0.8;
+    box-shadow: none;
+    opacity: 0.85;
   }
 `
