@@ -15,7 +15,7 @@ export default function SEO({
   shouldExcludeTitleSuffix = false,
   shouldIndexPage = true
 }: SEOProps) {
-  const pageTitle = `${title} ${!shouldExcludeTitleSuffix && '| MateuxLucax'}`;
+  const pageTitle = `${title} ${shouldExcludeTitleSuffix ? '' : '| MateuxLucax'}`;
   const pageImage = image ? `${process.env.NEXT_PUBLIC_SITE_URL}/${image}` : null;
 
   return (
