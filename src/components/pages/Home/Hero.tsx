@@ -15,7 +15,6 @@ export default function HomeHero({ titlePrefix, subtitle }: HomeHeroProps) {
       <RocketContainer>
         <Link
           to="latest-projects"
-          spy={true}
           smooth={true}
           duration={300}
         >
