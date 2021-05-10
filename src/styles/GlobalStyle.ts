@@ -18,7 +18,7 @@ export default createGlobalStyle`
     min-height: 100vh;
     background: ${colors.white};
     color: ${colors.black};
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-family: 'Fira Mono', monospace;
   }
 
   button {

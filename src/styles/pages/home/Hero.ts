@@ -72,8 +72,14 @@ export const Hero = styled.section`
   h1 {
     padding: 0 ${theme.space.lg};
     margin-bottom: ${theme.space.xl};
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: ${theme.fontSizes.extraLarge};
+    line-height: 1.75;
+    
+    span {
+      font-weight: normal;
+    }
   }
 
   h2 {
@@ -83,14 +89,14 @@ export const Hero = styled.section`
 
     padding: 0 ${theme.space.lg};
     font-size: ${theme.fontSizes.large};
-    max-width: 24rem;
+    max-width: 26rem;
   }
 
   background: radial-gradient(110% 45% at 100% 100%, #FF7E5F 0%, rgba(255, 126, 95, 0) 100%), 
               radial-gradient(65% 60% at 0% 30%, #A03189 0%, rgba(160, 49, 137, 0) 100%), 
               radial-gradient(335% 100% at 100% 0%, #3C308C 0%, rgba(60, 48, 140, 0.75) 100%);
 	background-size: 200% 200%;
-  animation: ${HeroAnimation} infinite 20s ease-in-out alternate;
+  animation: ${HeroAnimation} infinite 30s ease-in-out alternate;
   clip-path: polygon(100% 0, 100% 100%, 50% 95%, 0 100%, 0 0);
   backdrop-filter: blur(10px);
 `

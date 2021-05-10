@@ -12,6 +12,7 @@ export const PrimaryButton = styled.button`
   cursor: pointer;
   transition: all 250ms ease-in-out;
   box-shadow: ${boxShadow.primary};
+  font-family: 'Fira Mono', monospace;
 
   :hover {
     box-shadow: ${boxShadow.primaryLight};

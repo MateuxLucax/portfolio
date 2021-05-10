@@ -27,8 +27,8 @@ export default function HomeLatestProjects({ title, buttonText, projects }: Home
               <Image
                 src={`/assets/images/projects/${project.image}`}
                 alt={project.title}
-                width={343}
-                height={193}
+                width={340}
+                height={190}
                 layout="responsive"
               />
               <h3>{project.title}</h3>
@@ -45,9 +45,8 @@ export default function HomeLatestProjects({ title, buttonText, projects }: Home
           <path d="M10.6667 36.9784L16.0005 34.3369L21.3343 36.9784L16.0005 46.2223L10.6667 36.9784Z" fill="url(#paint0_linear)" />
           <defs>
             <linearGradient id="paint0_linear" x1="15.9996" y1="34.3386" x2="16" y2="46.2235" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#FFA200" />
-              <stop offset="1" stop-color="#FFCC66" />
-              <stop offset="1" stop-color="#FFCC66" />
+              <stop stopColor="#FFA200" />
+              <stop offset="1" stopColor="#FFCC66" />
             </linearGradient>
           </defs>
         </svg>

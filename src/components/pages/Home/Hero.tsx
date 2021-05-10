@@ -10,7 +10,7 @@ export default function HomeHero({ titlePrefix, subtitle }: HomeHeroProps) {
   return (
     <Hero>
       <h2>{titlePrefix}</h2>
-      <h1>Mateux Lucax</h1>
+      <h1>Mateux <span>Lucax</span></h1>
       <h2>{subtitle}</h2>
       <RocketContainer>
         <Link
@@ -28,7 +28,6 @@ export default function HomeHero({ titlePrefix, subtitle }: HomeHeroProps) {
               <defs>
                 <linearGradient id="hero-rocket-fire" x1="14.999" y1=".577" x2="15" y2="34.003" gradientUnits="userSpaceOnUse">
                   <stop stopColor="#FFA200" />
-                  <stop offset="1" stopColor="#FC6" />
                   <stop offset="1" stopColor="#FC6" />
                 </linearGradient>
               </defs>
