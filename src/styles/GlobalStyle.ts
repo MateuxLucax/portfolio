@@ -7,6 +7,7 @@ export default createGlobalStyle`
 
   html {
     font-size: 68.75%;
+    scroll-behavior: smooth;
   }
 
   ::selection {

@@ -73,7 +73,7 @@ export const Hero = styled.section`
     padding: 0 ${theme.space.lg};
     margin-bottom: ${theme.space.xl};
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: ${theme.fontSizes.extraLarge};
     line-height: 1.75;
     

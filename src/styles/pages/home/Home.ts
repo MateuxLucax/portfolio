@@ -59,7 +59,7 @@ export const ContentList = styled.ul`
     color: ${colors.primary};
     background: rgba(249, 249, 249, 0.7);
     backdrop-filter: blur(10px);
-    font-weight: 600;
+    font-weight: bold;
     font-size: ${theme.fontSizes.small};
     padding: ${theme.space.sm} ${theme.space.md};
     bottom: ${theme.space.md};
