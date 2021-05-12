@@ -19,22 +19,24 @@ export default function HomeLatestProjects({ title, buttonText, projects }: Home
       <Subtitle>{title}</Subtitle>
       <ContentList>
         {projects.map(project =>
-          <Link
-            href={`/projects/${project.destination}`}
-            key={project.key}
-          >
-            <a>
-              <Image
-                src={`/assets/images/projects/${project.image}`}
-                alt={project.title}
-                width={340}
-                height={190}
-                layout="responsive"
-              />
-              <h3>{project.title}</h3>
-              <h5>{project.buttonText}</h5>
-            </a>
-          </Link>
+          <li>
+            <Link
+              href={`/projects/${project.destination}`}
+              key={project.key}
+            >
+              <a>
+                <Image
+                  src={`/assets/images/projects/${project.image}`}
+                  alt={project.title}
+                  width={340}
+                  height={190}
+                  layout="responsive"
+                />
+                <h3>{project.title}</h3>
+                <h4>{project.buttonText}</h4>
+              </a>
+            </Link>
+          </li>
         )}
       </ContentList>
       <PrimaryButton>{buttonText}</PrimaryButton>

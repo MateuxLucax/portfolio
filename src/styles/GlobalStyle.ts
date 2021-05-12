@@ -16,6 +16,7 @@ export default createGlobalStyle`
   }
 
   body {
+    position: relative;
     min-height: 100vh;
     background: ${colors.white};
     color: ${colors.black};

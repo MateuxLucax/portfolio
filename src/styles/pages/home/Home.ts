@@ -12,9 +12,13 @@ export const ContentList = styled.ul`
   flex-direction: column;
   padding: ${theme.space.xl} 0;
 
-  a {
+  li {
     width: calc(100vw - 2.4rem);
     position: relative;
+
+    img {
+      object-fit: cover;
+    }
     
     :nth-child(even) {
       align-self: flex-end;   
@@ -54,7 +58,7 @@ export const ContentList = styled.ul`
     left: ${theme.space.md};
   }
 
-  h5 {
+  h4 {
     position: absolute;
     color: ${colors.primary};
     background: rgba(249, 249, 249, 0.7);
