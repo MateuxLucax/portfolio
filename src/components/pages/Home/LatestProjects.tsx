@@ -19,10 +19,9 @@ export default function HomeLatestProjects({ title, buttonText, projects }: Home
       <Subtitle>{title}</Subtitle>
       <ContentList>
         {projects.map(project =>
-          <li>
+          <li key={project.key}>
             <Link
               href={`/projects/${project.destination}`}
-              key={project.key}
             >
               <a>
                 <Image

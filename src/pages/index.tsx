@@ -1,29 +1,30 @@
-import HomeHero from "@/components/pages/Home/Hero";
-import HomeLatestProjects from "@/components/pages/Home/LatestProjects";
-import SEO from "@/components/SEO";
-import HomeListItem from "@/models/HomeListItem";
+import Navbar from '@/components/navbar/Navbar';
+import HomeHero from '@/components/pages/Home/Hero';
+import HomeLatestProjects from '@/components/pages/Home/LatestProjects';
+import SEO from '@/components/SEO';
+import HomeListItem from '@/models/HomeListItem';
 
 const projects: HomeListItem[] = [
   {
     key: 1,
-    buttonText: "Case Study →",
-    destination: "mrt-producoes",
-    image: "mrt-producoes.png",
-    title: "MRT Produções",
+    buttonText: 'Case Study →',
+    destination: 'mrt-producoes',
+    image: 'mrt-producoes.png',
+    title: 'MRT Produções',
   },
   {
     key: 2,
-    buttonText: "Case Study →",
-    destination: "lixeira-inteligente",
-    image: "lixeira-inteligente.png",
-    title: "Lixeira Inteligente",
+    buttonText: 'Case Study →',
+    destination: 'lixeira-inteligente',
+    image: 'lixeira-inteligente.png',
+    title: 'Lixeira Inteligente',
   },
   {
     key: 3,
-    buttonText: "Case Study →",
-    destination: "almocai",
-    image: "almocai.png",
-    title: "Almoçaí",
+    buttonText: 'Case Study →',
+    destination: 'almocai',
+    image: 'almocai.png',
+    title: 'Almoçaí',
   },
 ];
 
@@ -44,6 +45,32 @@ export default function Home() {
         buttonText="See more projects →"
         projects={projects}
       />
+
+      <Navbar
+        items={[
+          {
+            destination: '/blog',
+            image: 'blog.svg',
+            title: 'Blog',
+          },
+          {
+            destination: '/projects',
+            image: 'projects.svg',
+            title: 'Projects',
+          },
+          {
+            destination: '#contact',
+            image: 'contact.svg',
+            title: 'Contact',
+          },
+          {
+            destination: '/',
+            image: 'home.svg',
+            title: 'Home',
+            isActive: true,
+          },
+        ]}
+      />
     </>
-  )
+  );
 }

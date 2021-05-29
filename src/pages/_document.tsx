@@ -1,4 +1,3 @@
-import Navbar from '@/components/navbar/Navbar'
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
@@ -61,17 +60,6 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          {/* <Navbar
-            items={
-              [
-                {
-                  destination: "blog",
-                  image: "blog.svg",
-                  title: "Blog",
-                }
-              ]
-            }
-          /> */}
         </body>
       </Html>
     )

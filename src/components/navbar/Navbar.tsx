@@ -1,5 +1,6 @@
-import Image from 'next/image';
+import hideNavbar from '@/lib/hideNavbar';
 import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 import { Container } from '../../styles/navbar/navbar';
 
 export interface NavbarItem {
@@ -14,23 +15,37 @@ export interface NavbarProps {
 }
 
 export default function Navbar(props: NavbarProps) {
+  let visible = false;
+  visible = hideNavbar();
+
+  const [height, setHeight] = useState(0);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    setHeight(ref.current.clientHeight);
+  });
+
   return (
-    <Container>
+    <Container
+      ref={ref}
+      style={{
+        transform: `translate(0, ${visible ? `${height}px` : '0px'})`,
+        transition: 'transform .3s ease',
+      }}
+    >
       {props.items.map(item => (
-        <li className={item.isActive && 'active'}>
-          <Link href={item.destination}>
+        <Link href={item.destination} key={item.title}>
+          <li className={item.isActive && 'active'}>
             <>
-              <Image
+              <img
                 src={`/assets/icons/navbar/${item.image}`}
                 alt={item.title}
-                width={24}
-                height={24}
               />
               <span>{item.title}</span>
             </>
-          </Link>
-        </li>
+          </li>
+        </Link>
       ))}
-    </Container >
-  )
+    </Container>
+  );
 }
