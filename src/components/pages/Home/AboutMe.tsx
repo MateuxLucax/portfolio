@@ -21,7 +21,7 @@ interface AboutMeProps {
 
 export default function AboutMe(props: AboutMeProps) {
   return (
-    <Container>
+    <Container id="about-me">
       <Subtitle color={colors.white}>{props.title}</Subtitle>
       <Summary>
         <SummaryText>{Parser(props.text)}</SummaryText>
