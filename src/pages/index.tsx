@@ -1,4 +1,5 @@
 import Navbar from '@/components/navbar/Navbar';
+import AboutMe from '@/components/pages/Home/AboutMe';
 import HomeHero from '@/components/pages/Home/Hero';
 import HomeLatestProjects from '@/components/pages/Home/LatestProjects';
 import SEO from '@/components/SEO';
@@ -70,6 +71,13 @@ export default function Home() {
             isActive: true,
           },
         ]}
+      />
+
+      <AboutMe
+        title="About me"
+        text="I’m <strong>Mateus Lucas</strong>, an 19 years old Brazilian <strong>front-end developer</strong>, but I also enjoy some back-end code lol. <br/><br/> My passion is to <strong>solve problems</strong> and create awesome experiences. <strong>Imagining</strong> all the  <strong>aspects</strong> and <strong>interactions</strong> that a <strong>user</strong> might have. <br/><br/> On my free time, I enjoy futzing around some code, read articles about <strong>rockets and space</strong>, play some Kerbal Space Program or design something."
+        image="me.png"
+        socialMedia="You can also follow my work on:"
       />
     </>
   );

@@ -76,7 +76,7 @@ export const Hero = styled.section`
     font-weight: 700;
     font-size: ${theme.fontSizes.extraLarge};
     line-height: 1.75;
-    
+
     span {
       font-weight: normal;
     }
@@ -84,7 +84,7 @@ export const Hero = styled.section`
 
   h2 {
     :nth-child(1) {
-      margin-top: ${theme.space.xl}; 
+      margin-top: ${theme.space.xl};
     }
 
     padding: 0 ${theme.space.lg};
@@ -92,8 +92,8 @@ export const Hero = styled.section`
     max-width: 26rem;
   }
 
-  background: radial-gradient(110% 45% at 100% 100%, #FF7E5F 0%, rgba(255, 126, 95, 0) 100%), 
-              radial-gradient(65% 60% at 0% 30%, #A03189 0%, rgba(160, 49, 137, 0) 100%), 
+  background: radial-gradient(110% 45% at 100% 100%, #FF7E5F 0%, rgba(255, 126, 95, 0) 100%),
+              radial-gradient(65% 60% at 0% 30%, #A03189 0%, rgba(160, 49, 137, 0) 100%),
               radial-gradient(335% 100% at 100% 0%, #3C308C 0%, rgba(60, 48, 140, 0.75) 100%);
 	background-size: 200% 200%;
   animation: ${HeroAnimation} infinite 30s ease-in-out alternate;
@@ -131,5 +131,5 @@ export const ThirdPlume = styled.div`
   width: 25%;
   background: rgba(191, 191, 191, 0.5);
   backdrop-filter: blur(1rem);
-  clip-path: polygon(50% 0, 0 100%, 100% 100%); 
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
 `

@@ -6,5 +6,5 @@ export const Subtitle = styled.h2`
   font-style: normal;
   font-weight: bold;
   font-size: ${theme.fontSizes.large};
-  color: ${props => props.color || colors.primary};
+  color: ${props => props.color  || colors.primary};
 `

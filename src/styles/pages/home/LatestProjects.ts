@@ -44,6 +44,8 @@ export const FirstPlume = styled.div`
   backdrop-filter: blur(1rem);
   width: 100%;
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  transform: translateY(.1rem);
+
 `
 
 export const SecondPlume = styled.div`
@@ -65,5 +67,5 @@ export const ThirdPlume = styled.div`
   width: 25%;
   background: rgba(123, 115, 175, 0.5);
   backdrop-filter: blur(1rem);
-  clip-path: polygon(50% 0, 0 100%, 100% 100%); 
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
 `
