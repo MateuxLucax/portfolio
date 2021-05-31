@@ -1,5 +1,5 @@
-import GlobalStyle from "@/styles/GlobalStyle";
-import useWindowSize from '@/lib/useWindowSize'
+import GlobalStyle from '@/styles/GlobalStyle';
+import useWindowSize from '@/lib/useWindowSize';
 
 export default function MyApp({ Component, pageProps }) {
   useWindowSize();
@@ -9,5 +9,5 @@ export default function MyApp({ Component, pageProps }) {
       <GlobalStyle />
       <Component {...pageProps} />
     </>
-  )
+  );
 }

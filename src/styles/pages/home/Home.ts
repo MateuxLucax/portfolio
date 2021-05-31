@@ -19,9 +19,9 @@ export const ContentList = styled.ul`
     img {
       object-fit: cover;
     }
-    
+
     :nth-child(even) {
-      align-self: flex-end;   
+      align-self: flex-end;
     }
 
     :nth-child(odd) {
@@ -31,7 +31,7 @@ export const ContentList = styled.ul`
     :not(:last-child) {
       margin-bottom: ${theme.space.lg}
     }
-    
+
     transition: all 250ms ease-in-out;
     box-shadow: ${boxShadow.medium};
 
@@ -68,7 +68,7 @@ export const ContentList = styled.ul`
     padding: ${theme.space.sm} ${theme.space.md};
     bottom: ${theme.space.md};
     right: ${theme.space.md};
-    
+
     transition: all 250ms ease-in-out;
     box-shadow: ${boxShadow.medium};
 

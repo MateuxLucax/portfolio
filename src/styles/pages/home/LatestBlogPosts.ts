@@ -2,13 +2,10 @@ import colors from '@/styles/theme/colors';
 import theme from '@/styles/theme/theme';
 import styled, { keyframes } from 'styled-components';
 
-export const LatestProjectsSection = styled.section`
+export const Container = styled.section`
   text-align: center;
-
-  h2 {
-    padding-top: ${theme.space.lg};
-  }
 `
+
 
 const rocketAnimation = keyframes`
   from {
@@ -40,7 +37,7 @@ export const FirstPlume = styled.div`
   bottom: 0;
   height: 3rem;
   position: absolute;
-  background: ${colors.primary};
+  background: ${colors.black};
   backdrop-filter: blur(1rem);
   width: 100%;
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
@@ -52,7 +49,7 @@ export const SecondPlume = styled.div`
   bottom: 0;
   height: 5rem;
   position: absolute;
-  background: rgba(79, 69, 145, 0.5);
+  background: rgba(18, 29, 91, 0.5);;
   backdrop-filter: blur(1rem);
   width: 70%;
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
@@ -64,7 +61,7 @@ export const ThirdPlume = styled.div`
   bottom: 0;
   height: 7rem;
   width: 25%;
-  background: rgba(123, 115, 175, 0.5);
+  background: rgba(101, 113, 181, 0.5);
   backdrop-filter: blur(1rem);
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
 `

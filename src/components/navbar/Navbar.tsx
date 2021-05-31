@@ -23,6 +23,7 @@ export default function Navbar(props: NavbarProps) {
 
   useEffect(() => {
     setHeight(ref.current.clientHeight);
+    document.documentElement.style.setProperty('--navbarHeight', `${height}px`);
   });
 
   return (

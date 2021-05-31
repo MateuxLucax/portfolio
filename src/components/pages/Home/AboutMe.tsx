@@ -1,9 +1,13 @@
 import {
   Container,
+  FirstPlume,
+  RocketsContainer,
+  SecondPlume,
   SocialMedia,
   SocialMediaTags,
   Summary,
   SummaryText,
+  ThirdPlume,
 } from '@/styles/pages/home/AboutMe';
 import Parser from 'html-react-parser';
 import { Subtitle } from '@/styles/Typography';
@@ -11,6 +15,7 @@ import React from 'react';
 import colors from '@/styles/theme/colors';
 import Image from 'next/image';
 import Link from 'next/link';
+import { scrollToElement } from '@/lib/Utils';
 
 interface AboutMeProps {
   title: string;
@@ -78,6 +83,45 @@ export default function AboutMe(props: AboutMeProps) {
           </li>
         </SocialMediaTags>
       </SocialMedia>
+
+      <RocketsContainer
+        onClick={() =>
+          scrollToElement(document.querySelector('#latest-blog-posts'))
+        }
+      >
+        <svg width="32" height="48" fill="none">
+          <path
+            d="M0 42.261L16 0l16 42.261-16-17.168L0 42.261z"
+            fill="#F9F9F9"
+          />
+          <path
+            d="M0 42.261l16-17.168 16 17.168-16-10.566L0 42.261z"
+            fill="#D5D5D5"
+          />
+          <path
+            d="M10.667 36.978L16 34.337l5.334 2.641L16 46.222l-5.333-9.244z"
+            fill="url(#paint0_linear)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear"
+              x1="16"
+              y1="34.339"
+              x2="16"
+              y2="46.223"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#FFA200" />
+              <stop offset="1" stopColor="#FC6" />
+              <stop offset="1" stopColor="#FC6" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <ThirdPlume />
+        <SecondPlume />
+        <FirstPlume />
+      </RocketsContainer>
     </Container>
   );
 }

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Subtitle } from '@/styles/Typography';
-import { PrimaryButton } from '@/styles/Buttons';
+import { PrimaryButton, primaryTheme } from '@/styles/Buttons';
 import { ContentList } from '@/styles/pages/home/Home';
 import HomeListItem from '@/models/HomeListItem';
 import {
@@ -46,11 +46,19 @@ export default function HomeLatestProjects({
           </li>
         ))}
       </ContentList>
-      <PrimaryButton>{buttonText}</PrimaryButton>
+      <Link href="projects/">
+        <PrimaryButton theme={primaryTheme}>{buttonText}</PrimaryButton>
+      </Link>
       <RocketsContainer
         onClick={() => scrollToElement(document.querySelector('#about-me'))}
       >
-        <svg width="32" height="48" viewBox="0 0 32 48" fill="none">
+        <svg
+          width="32"
+          height="48"
+          viewBox="0 0 32 48"
+          fill="none"
+          style={{ cursor: 'pointer' }}
+        >
           <path
             d="M0 42.2614L16 0L32 42.2614L16 25.093L0 42.2614Z"
             fill="#3C308C"
